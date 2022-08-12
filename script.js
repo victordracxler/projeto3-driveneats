@@ -1,5 +1,5 @@
 function selecionarPrato(prato){
-    const botaoSelecionado = document.querySelector('.selecionado');
+    const botaoSelecionado = document.querySelector('.comida .selecionado');
 
     if (botaoSelecionado !== null){
         botaoSelecionado.classList.remove('selecionado')
@@ -13,7 +13,7 @@ function selecionarPrato(prato){
 }
 
 function selecionarBebida(bebida){
-    const botaoSelecionado = document.querySelector('.selecionado');
+    const botaoSelecionado = document.querySelector('.bebida .selecionado');
 
     if (botaoSelecionado !== null){
         botaoSelecionado.classList.remove('selecionado')
@@ -27,7 +27,7 @@ function selecionarBebida(bebida){
 }
 
 function selecionarSobremesa(sobremesa){
-    const botaoSelecionado = document.querySelector('.selecionado');
+    const botaoSelecionado = document.querySelector('.sobremesa .selecionado');
 
     if (botaoSelecionado !== null){
         botaoSelecionado.classList.remove('selecionado')
