@@ -163,3 +163,44 @@ body{
 .active {
     background-color: #32B72F;
 }
+
+.overlay{
+    display: none;
+}
+.confirmation-screen{
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    opacity: 0.9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confirmation-box{
+    width: 377px;
+    height: 353px;
+    background-color: #50D074;
+    opacity: 100%;
+    border-radius: 9px;
+    position: fixed;
+    z-index: 21;
+    top:  calc(50% - 353px/2 - 0.5px);
+    left: calc(50% - 377px/2 - 0.5px);
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.confirmation-box div{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}

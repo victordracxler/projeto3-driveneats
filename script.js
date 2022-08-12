@@ -58,3 +58,11 @@ function ativarBotao(){
        elemento.innerHTML = msgFechar;
     }
 }
+
+function confirmarPedido(){
+    document.querySelector('.overlay').style.display = "block";
+}
+
+function cancelarPedido(){
+    document.querySelector('.overlay').style.display = "none";
+}

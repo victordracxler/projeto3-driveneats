@@ -52,6 +52,7 @@
                         <h3>Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
                         <h4>R$ 14,90</h4>
+                        <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                     <div onclick="selecionarPrato('opcao4')" class="item opcao4">
                         <img src="images\frango_yin_yang 2.png" alt="" />
@@ -134,7 +135,33 @@
             </div>
         </div>
         <div class="bottombar">
-            <button disabled class="botao-selecionar">Selecione os 3 itens para fechar o pedido</button>
+            <button disabled class="botao-selecionar" onclick="confirmarPedido()">Selecione os 3 itens para fechar o
+                pedido</button>
+        </div>
+
+        <div class="overlay">
+            <div class="confirmation-screen"></div>
+            <div class="confirmation-box">
+                <h3>Confirme seu pedido</h3>
+                <div>
+                    <p>prato</p>
+                    <p>15,00</p>
+                </div>
+                <div>
+                    <p>prato</p>
+                    <p>15,00</p>
+                </div>
+                <div>
+                    <p>prato</p>
+                    <p>15,00</p>
+                </div>
+                <div>
+                    <h3>total</h3>
+                    <h3>45,00</h3>
+                </div>
+                <button>Tudo certo, pode pedir!</button>
+                <button onclick="cancelarPedido()">Cancelar</button>
+            </div>
         </div>
     </div>
 
