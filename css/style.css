@@ -204,3 +204,27 @@ body{
     width: 80%;
     justify-content: space-between;
 }
+
+.confirmation-box .confirmar{
+    border: none;
+    border-radius: 100px;
+    width: 329px;
+    height: 52px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #50D074;
+    background-color:#ffffff;
+
+}
+
+.confirmation-box .cancelar{
+    border: none;
+    border-radius: 100px;
+    width: 329px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    background-color:#50D074;
+    
+}

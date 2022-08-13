@@ -66,3 +66,62 @@ function confirmarPedido(){
 function cancelarPedido(){
     document.querySelector('.overlay').style.display = "none";
 }
+
+function telaConfirmacao(){
+
+    //Comida
+
+    const comida = document.querySelector('.comida .selecionado h3').innerHTML;
+    console.log(comida);
+
+    const precoVirgula1 = document.querySelector('.comida .selecionado span').innerHTML;
+    console.log(precoVirgula1);
+
+    const nomezinho1 = document.querySelector('.conf-comida .nome-do-prato');
+    nomezinho1.innerHTML = comida;
+
+    const precinho1 = document.querySelector('.conf-comida .preco-do-prato');
+    precinho1.innerHTML = precoVirgula1;
+
+    //Bebida
+    
+    const bebida = document.querySelector('.bebida .selecionado h3').innerHTML;
+    console.log(bebida);
+
+    const precoVirgula2 = document.querySelector('.bebida .selecionado span').innerHTML;
+    console.log(precoVirgula2);
+
+    const nomezinho2 = document.querySelector('.conf-bebida .nome-do-prato');
+    nomezinho2.innerHTML = bebida;
+
+    const precinho2 = document.querySelector('.conf-bebida .preco-do-prato');
+    precinho2.innerHTML = precoVirgula2;
+
+    //sobremesa
+
+    const sobremesa = document.querySelector('.sobremesa .selecionado h3').innerHTML;
+    console.log(sobremesa);
+
+    const precoVirgula3 = document.querySelector('.sobremesa .selecionado span').innerHTML;
+    console.log(precoVirgula3);
+
+    const nomezinho3 = document.querySelector('.conf-sobremesa .nome-do-prato');
+    nomezinho3.innerHTML = sobremesa;
+
+    const precinho3 = document.querySelector('.conf-sobremesa .preco-do-prato');
+    precinho3.innerHTML = precoVirgula3;
+
+    
+    const precoPonto1 = Number(precoVirgula1.replace(',','.'));
+    const precoPonto2 = Number(precoVirgula2.replace(',','.'));
+    const precoPonto3 = Number(precoVirgula3.replace(',','.'));
+
+    const totalPonto = precoPonto1 + precoPonto2 + precoPonto3;
+
+    const totalVirgula = String(totalPonto.toFixed(2)).replace('.',',');
+    
+    const totalzinho = document.querySelector('.preco-total');
+    totalzinho.innerHTML = totalVirgula;
+    
+
+}

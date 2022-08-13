@@ -37,28 +37,28 @@
                         <img src="images\frango_yin_yang 2.png" alt="" />
                         <h3>Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
-                        <h4>R$ 14,90</h4>
+                        <h4>R$ <span>14,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                     <div onclick="selecionarPrato('opcao2')" class="item opcao2">
                         <img src="images\frango_yin_yang 2.png" alt="" />
                         <h3>Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
-                        <h4>R$ 14,90</h4>
+                        <h4>R$ <span>14,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                     <div onclick="selecionarPrato('opcao3')" class="item opcao3">
                         <img src="images\frango_yin_yang 2.png" alt="" />
                         <h3>Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
-                        <h4>R$ 14,90</h4>
+                        <h4>R$ <span>14,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                     <div onclick="selecionarPrato('opcao4')" class="item opcao4">
                         <img src="images\frango_yin_yang 2.png" alt="" />
                         <h3>Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
-                        <h4>R$ 14,90</h4>
+                        <h4>R$ <span>14,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
@@ -72,28 +72,28 @@
                         <img src="images\coquinha_gelada 1.png" alt="" />
                         <h3>Coquinha gelada</h3>
                         <p>Lata 350ml</p>
-                        <h4>R$ 4,90</h4>
+                        <h4>R$ <span>4,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                     <div onclick="selecionarBebida('bebida2')" class="item bebida2">
                         <img src="images\coquinha_gelada 1.png" alt="" />
                         <h3>Coquinha gelada</h3>
                         <p>Lata 350ml</p>
-                        <h4>R$ 4,90</h4>
+                        <h4>R$ <span>4,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                     <div onclick="selecionarBebida('bebida3')" class="item bebida3">
                         <img src="images\coquinha_gelada 1.png" alt="" />
                         <h3>Coquinha gelada</h3>
                         <p>Lata 350ml</p>
-                        <h4>R$ 4,90</h4>
+                        <h4>R$ <span>4,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                     <div onclick="selecionarBebida('bebida4')" class="item bebida4">
                         <img src="images\coquinha_gelada 1.png" alt="" />
                         <h3>Coquinha gelada</h3>
                         <p>Lata 350ml</p>
-                        <h4>R$ 4,90</h4>
+                        <h4>R$ <span>4,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
@@ -107,35 +107,36 @@
                         <img src="images\pudim 1.png" alt="" />
                         <h3>Pudim</h3>
                         <p>Apenas pudim</p>
-                        <h4>R$ 7,90</h4>
+                        <h4>R$ <span>7,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                     <div onclick="selecionarSobremesa('sobremesa2')" class="item sobremesa2">
                         <img src="images\pudim 1.png" alt="" />
                         <h3>Pudim</h3>
                         <p>Apenas pudim</p>
-                        <h4>R$ 7,90</h4>
+                        <h4>R$ <span>7,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                     <div onclick="selecionarSobremesa('sobremesa3')" class="item sobremesa3">
                         <img src="images\pudim 1.png" alt="" />
                         <h3>Pudim</h3>
                         <p>Apenas pudim</p>
-                        <h4>R$ 7,90</h4>
+                        <h4>R$ <span>7,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                     <div onclick="selecionarSobremesa('sobremesa4')" class="item sobremesa4">
                         <img src="images\pudim 1.png" alt="" />
                         <h3>Pudim</h3>
                         <p>Apenas pudim</p>
-                        <h4>R$ 7,90</h4>
+                        <h4>R$ <span>7,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
                 </div>
             </div>
         </div>
         <div class="bottombar">
-            <button disabled class="botao-selecionar" onclick="confirmarPedido()">Selecione os 3 itens para fechar o
+            <button disabled class="botao-selecionar" onclick="confirmarPedido();telaConfirmacao()">Selecione os 3 itens
+                para fechar o
                 pedido</button>
         </div>
 
@@ -143,24 +144,24 @@
             <div class="confirmation-screen"></div>
             <div class="confirmation-box">
                 <h3>Confirme seu pedido</h3>
-                <div>
-                    <p>prato</p>
-                    <p>15,00</p>
+                <div class="conf-comida">
+                    <p class="nome-do-prato">prato</p>
+                    <p class="preco-do-prato">valor</p>
+                </div>
+                <div class="conf-bebida">
+                    <p class="nome-do-prato">prato</p>
+                    <p class="preco-do-prato">valor</p>
+                </div>
+                <div class="conf-sobremesa">
+                    <p class="nome-do-prato">prato</p>
+                    <p class="preco-do-prato">valor</p>
                 </div>
                 <div>
-                    <p>prato</p>
-                    <p>15,00</p>
+                    <h3>TOTAL</h3>
+                    <h3 class="preco-total">45,00</h3>
                 </div>
-                <div>
-                    <p>prato</p>
-                    <p>15,00</p>
-                </div>
-                <div>
-                    <h3>total</h3>
-                    <h3>45,00</h3>
-                </div>
-                <button>Tudo certo, pode pedir!</button>
-                <button onclick="cancelarPedido()">Cancelar</button>
+                <button class="confirmar">Tudo certo, pode pedir!</button>
+                <button class="cancelar" onclick="cancelarPedido()">Cancelar</button>
             </div>
         </div>
     </div>
