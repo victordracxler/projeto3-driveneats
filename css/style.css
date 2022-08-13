@@ -205,6 +205,17 @@ body{
     justify-content: space-between;
 }
 
+.confirmation-box h3{
+    font-size: 22px;
+    font-weight: 700;
+    color: #FFFFFF;
+}
+.confirmation-box p{
+    font-size: 22px;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
 .confirmation-box .confirmar{
     border: none;
     border-radius: 100px;
