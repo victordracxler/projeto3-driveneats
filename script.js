@@ -1,79 +1,77 @@
-let selecoes = 0
+let selecoes = 0;
+let comidaWpp = '';
+let bebidaWpp = '';
+let sobremesaWpp = '';
+let totalWpp = '';
 
-function selecionarPrato(prato){
+function selecionarPrato(prato) {
     const botaoSelecionado = document.querySelector('.comida .selecionado');
 
-    if (botaoSelecionado !== null){
+    if (botaoSelecionado !== null) {
         botaoSelecionado.classList.remove('selecionado')
         selecoes--;
     }
 
-    const seletor = '.' + prato;
-    const botao = document.querySelector(seletor);
-    botao.classList.add('selecionado');
+    prato.classList.add('selecionado');
     selecoes++;
 
     ativarBotao();
 }
 
-function selecionarBebida(bebida){
+function selecionarBebida(bebida) {
     const botaoSelecionado = document.querySelector('.bebida .selecionado');
 
-    if (botaoSelecionado !== null){
+    if (botaoSelecionado !== null) {
         botaoSelecionado.classList.remove('selecionado')
         selecoes--;
     }
 
-    const seletor = '.' + bebida;
-    const botao = document.querySelector(seletor);
-    botao.classList.add('selecionado');
+    bebida.classList.add('selecionado');
     selecoes++;
 
     ativarBotao();
 }
 
-function selecionarSobremesa(sobremesa){
+function selecionarSobremesa(sobremesa) {
     const botaoSelecionado = document.querySelector('.sobremesa .selecionado');
 
-    if (botaoSelecionado !== null){
+    if (botaoSelecionado !== null) {
         botaoSelecionado.classList.remove('selecionado')
         selecoes--;
     }
 
-    const seletor = '.' + sobremesa;
-    const botao = document.querySelector(seletor);
-    botao.classList.add('selecionado');
+    sobremesa.classList.add('selecionado');
     selecoes++;
 
     ativarBotao();
 }
 
-function ativarBotao(){
+function ativarBotao() {
     const elemento = document.querySelector('.botao-selecionar')
     const msgFechar = 'Fechar pedido';
 
-    if (selecoes === 3){
-       elemento.disabled = false;
-       elemento.classList.add('active')
-       elemento.innerHTML = msgFechar;
+    if (selecoes === 3) {
+        elemento.disabled = false;
+        elemento.classList.add('active')
+        elemento.innerHTML = msgFechar;
     }
 }
 
-function confirmarPedido(){
+function confirmarPedido() {
     document.querySelector('.overlay').style.display = "block";
 }
 
-function cancelarPedido(){
+function cancelarPedido() {
     document.querySelector('.overlay').style.display = "none";
 }
 
-function telaConfirmacao(){
+function telaConfirmacao() {
 
     //Comida
 
     const comida = document.querySelector('.comida .selecionado h3').innerHTML;
     const precoVirgula1 = document.querySelector('.comida .selecionado span').innerHTML;
-    
+
     const nomezinho1 = document.querySelector('.conf-comida .nome-do-prato');
     nomezinho1.innerHTML = comida;
 
@@ -81,10 +79,10 @@ function telaConfirmacao(){
     precinho1.innerHTML = precoVirgula1;
 
     //Bebida
-    
+
     const bebida = document.querySelector('.bebida .selecionado h3').innerHTML;
     const precoVirgula2 = document.querySelector('.bebida .selecionado span').innerHTML;
-    
+
     const nomezinho2 = document.querySelector('.conf-bebida .nome-do-prato');
     nomezinho2.innerHTML = bebida;
 
@@ -95,7 +93,7 @@ function telaConfirmacao(){
 
     const sobremesa = document.querySelector('.sobremesa .selecionado h3').innerHTML;
     const precoVirgula3 = document.querySelector('.sobremesa .selecionado span').innerHTML;
-   
+
     const nomezinho3 = document.querySelector('.conf-sobremesa .nome-do-prato');
     nomezinho3.innerHTML = sobremesa;
 
@@ -103,17 +101,50 @@ function telaConfirmacao(){
     precinho3.innerHTML = precoVirgula3;
 
     // Total
-    
-    const precoPonto1 = Number(precoVirgula1.replace(',','.'));
-    const precoPonto2 = Number(precoVirgula2.replace(',','.'));
-    const precoPonto3 = Number(precoVirgula3.replace(',','.'));
+
+    const precoPonto1 = Number(precoVirgula1.replace(',', '.'));
+    const precoPonto2 = Number(precoVirgula2.replace(',', '.'));
+    const precoPonto3 = Number(precoVirgula3.replace(',', '.'));
 
     const totalPonto = precoPonto1 + precoPonto2 + precoPonto3;
 
-    const totalVirgula = String(totalPonto.toFixed(2)).replace('.',',');
-    
+    const totalVirgula = String(totalPonto.toFixed(2)).replace('.', ',');
+
     const totalzinho = document.querySelector('.preco-total');
     totalzinho.innerHTML = 'R$ ' + totalVirgula;
+
+   
+    comidaWpp = comida;
+    bebidaWpp = bebida;
+    sobremesaWpp = sobremesa;
+    totalWpp = totalzinho.innerHTML = 'R$ ' + totalVirgula;
+
+
+}
+
+function whatsapp() {
+
+    const nome = prompt('Qual é seu nome?');
+    const endereco = prompt('Qual é o seu endereço?');
+
+    const mensagem = `Olá, gostaria de fazer o pedido:
+    - Prato: ${comidaWpp}
+    - Bebida: ${bebidaWpp}
+    - Sobremesa: ${sobremesaWpp}
+    Total: ${totalWpp}
     
+    Nome: ${nome}
+    Endereço: ${endereco}`;
+
+    let encodada = encodeURIComponent(mensagem);
+
+    console.log(mensagem)
+    console.log(encodada);
+
+    window.open(`https://wa.me/5521976327295?text=${encodada}`);
+
+
+
+
 
 }

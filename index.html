@@ -33,28 +33,28 @@
                     <h2>Primeiro, seu prato</h2>
                 </div>
                 <div class="section comida">
-                    <div onclick="selecionarPrato('opcao1')" class="item opcao1">
+                    <div onclick="selecionarPrato(this)" class="item">
                         <img src="images\frango_yin_yang 2.png" alt="" />
                         <h3>Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
                         <h4>R$ <span>14,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div onclick="selecionarPrato('opcao2')" class="item opcao2">
+                    <div onclick="selecionarPrato(this)" class="item">
                         <img src="images\frango_yin_yang 2.png" alt="" />
                         <h3>Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
                         <h4>R$ <span>14,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div onclick="selecionarPrato('opcao3')" class="item opcao3">
+                    <div onclick="selecionarPrato(this)" class="item">
                         <img src="images\frango_yin_yang 2.png" alt="" />
                         <h3>Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
                         <h4>R$ <span>14,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div onclick="selecionarPrato('opcao4')" class="item opcao4">
+                    <div onclick="selecionarPrato(this)" class="item">
                         <img src="images\frango_yin_yang 2.png" alt="" />
                         <h3>Frango Yin Yang</h3>
                         <p>Um pouco de batata, um pouco de salada</p>
@@ -68,28 +68,28 @@
                     <h2>Agora, sua bebida</h2>
                 </div>
                 <div class="section bebida">
-                    <div onclick="selecionarBebida('bebida1')" class="item bebida1">
+                    <div onclick="selecionarBebida(this)" class="item">
                         <img src="images\coquinha_gelada 1.png" alt="" />
                         <h3>Coquinha gelada</h3>
                         <p>Lata 350ml</p>
                         <h4>R$ <span>4,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div onclick="selecionarBebida('bebida2')" class="item bebida2">
+                    <div onclick="selecionarBebida(this)" class="item">
                         <img src="images\coquinha_gelada 1.png" alt="" />
                         <h3>Coquinha gelada</h3>
                         <p>Lata 350ml</p>
                         <h4>R$ <span>4,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div onclick="selecionarBebida('bebida3')" class="item bebida3">
+                    <div onclick="selecionarBebida(this)" class="item">
                         <img src="images\coquinha_gelada 1.png" alt="" />
                         <h3>Coquinha gelada</h3>
                         <p>Lata 350ml</p>
                         <h4>R$ <span>4,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div onclick="selecionarBebida('bebida4')" class="item bebida4">
+                    <div onclick="selecionarBebida(this)" class="item">
                         <img src="images\coquinha_gelada 1.png" alt="" />
                         <h3>Coquinha gelada</h3>
                         <p>Lata 350ml</p>
@@ -103,28 +103,28 @@
                     <h2>Por fim, sua sobremesa</h2>
                 </div>
                 <div class="section sobremesa">
-                    <div onclick="selecionarSobremesa('sobremesa1')" class="item sobremesa1">
+                    <div onclick="selecionarSobremesa(this)" class="item">
                         <img src="images\pudim 1.png" alt="" />
                         <h3>Pudim</h3>
                         <p>Apenas pudim</p>
                         <h4>R$ <span>7,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div onclick="selecionarSobremesa('sobremesa2')" class="item sobremesa2">
+                    <div onclick="selecionarSobremesa(this)" class="item">
                         <img src="images\pudim 1.png" alt="" />
                         <h3>Pudim</h3>
                         <p>Apenas pudim</p>
                         <h4>R$ <span>7,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div onclick="selecionarSobremesa('sobremesa3')" class="item sobremesa3">
+                    <div onclick="selecionarSobremesa(this)" class="item">
                         <img src="images\pudim 1.png" alt="" />
                         <h3>Pudim</h3>
                         <p>Apenas pudim</p>
                         <h4>R$ <span>7,90</span></h4>
                         <ion-icon class="icon-check" name="checkmark-circle"></ion-icon>
                     </div>
-                    <div onclick="selecionarSobremesa('sobremesa4')" class="item sobremesa4">
+                    <div onclick="selecionarSobremesa(this)" class="item">
                         <img src="images\pudim 1.png" alt="" />
                         <h3>Pudim</h3>
                         <p>Apenas pudim</p>
@@ -160,7 +160,7 @@
                     <h3>TOTAL</h3>
                     <h3 class="preco-total">45,00</h3>
                 </div>
-                <button class="confirmar">Tudo certo, pode pedir!</button>
+                <button class="confirmar" onclick="whatsapp()">Tudo certo, pode pedir!</button>
                 <button class="cancelar" onclick="cancelarPedido()">Cancelar</button>
             </div>
         </div>
