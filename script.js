@@ -141,7 +141,7 @@ function whatsapp() {
     console.log(mensagem)
     console.log(encodada);
 
-    window.open(`https://wa.me/5521976327295?text=${encodada}`);
+    window.location.assign(`https://wa.me/5521976327295?text=${encodada}`);
 
 
 
